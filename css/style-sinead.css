@@ -1,0 +1,360 @@
+/*
+ * Bootstrap Dashboard template 
+ */
+
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+	background-color: #f2f2f2; /* no websafe equivalent - this color is too nice to ditch for a light/gray */
+	min-width: 456px;
+}
+
+#sidebar {
+ 
+}
+
+.navbar-nav {
+	
+}
+
+#sidebarNav {
+	clear: left;
+	display: none;
+	  margin-bottom: 0px;
+	  margin-left: 0px;
+	  margin-right: 0px;
+}
+#sidebarNav.active { /* button will add/delete active class */
+	display: block;
+}
+#sidebarNav li {
+	text-align: center;
+}
+#sidebarNav ul {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.hrInSideNav {
+	background-color: green; 
+}
+.hrAfterBrand {
+	clear: left;
+	display: block;
+
+}
+.coffeeBrand {
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 100px;
+	  margin-bottom: 0px;
+	  margin-top: 0px;
+	  text-align: center;
+	  display: block;
+  }
+  .coffeeBrand img {
+	max-width: 100%;
+	min-width: 100%;
+	width: 100%;
+  }
+ 
+	.coffeeContactInfo {
+		display: none;
+	}
+
+#sidebarButton { /* for smaller screens; position the button to top left... */
+		position: fixed;
+		top: 20px;
+		left: 20px;
+	}
+	
+#topNavBar{
+	margin-bottom: 1em; /* leave some space below the nav bar */
+	overflow-x: hidden;
+	height: 48px;
+}
+
+.makeGreen{
+	text-decoration: underline;
+	text-decoration-color:  green;
+}
+.jumbotron {
+	background-color: white;
+	background-image: url('../images/about/coffee-jumbo2.jpg');
+	background-attachment: fixed; /* image fixed to back to page, it scrolls at a differnt rate  */
+	background-repeat: none;
+	background-size: cover;
+	color: white;
+	text-align: center;
+	min-height: 200px; /* make it bigger if want */
+	margin-bottom: 0px; 
+	width: 100%;
+}
+.aboutPageDetails {
+	margin-top: 20px;
+	/*margin-bottom: 10px;*/
+}
+.aboutPageDetails h1 {
+	text-align: center;
+}
+
+@media (min-width: 768px) {
+	#sidebarButton { /* not displayed for bigger screens... when not collapsed */
+		display: none;
+	}
+  #sidebar {
+    position: fixed;
+    top: 0px; /*  we want sidebar to take up l.h.s. 51px;*/
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: block;
+    padding: 20px;
+    overflow-x: hidden;
+    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+	border-right: 1px solid grey;
+	
+
+  }
+  .coffeeContactInfo {
+		display: block;
+	}
+  .coffeeBrand {
+	  margin-left: auto;
+	  margin-right: auto;
+	  width: 150px;
+	  margin-bottom: 20px;
+	  margin-top: 20px;
+	  text-align: center;
+	  display: block;
+  }
+  .coffeeBrand img {
+	max-width: 100%;
+	min-width: 100%;
+	width: 100%;
+	
+  }
+
+ 
+  #topNavBar {/*need to make this fixed */
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	left: offset-md-3;
+	z-index: 1030;
+	margin-bottom: 20px;
+  }
+  #sidebar .navbar-brand {
+	
+	  padding-right: 10px;
+	  text-align: center;
+  }
+  #sidebar .navbar-brand a {
+	  text-align: center;
+  }
+  
+  .coffeeContactInfo a {
+	  font-size: 85%;
+  }
+  .coffeeContactInfo p, .coffeeContactInfo a {
+	  font-size: 65%;
+  }
+  .coffeeContactInfo .siteCredits {
+	  padding: 10px;
+	  font-size: 65%;
+  }
+  .coffeeContactInfo .infoLink {
+	
+  }
+  /* Sidebar navigation */
+
+	#sidebarNav {
+		display: block;
+		clear: none;
+	 
+	  margin-bottom: 20px;
+	  margin-left: 0px;
+	  margin-right: 0px;
+	
+	}
+	#sidebarNav li {
+		text-align: left;
+	}
+	ul #sidebarNav {
+		margin-left: 0;
+		margin-right: 0px;
+	}
+	#sidebarNav > li > a {
+		margin-left: 0px;
+		margin-right: 0px;
+	  padding-right: 20px;
+	  padding-left: 20px;
+	}
+	#sidebarNav > .active > a,
+	#sidebarNav > .active > a:hover,
+	#sidebarNav > .active > a:focus {
+	  color: #fff;
+	  background-color: #428bca;
+
+	}
+	/* make single h1 on page = active side nav option - h1 is too big fudge smaller */
+	#sidebarNav h1 {
+		font-size: 100%;
+		margin-bottom: 0px; /* default for h1 was .4rem - disaster ! */
+	}
+	.aboutPageDetails {
+		margin-top: 20px;
+		/*margin-bottom: 10px;*/
+	}
+	.aboutPageDetails h1 {
+		text-align: center;
+	}
+	.aboutPageDetails h2 {
+		text-align: center;
+	}
+}
+  
+/*
+ * Middle section
+ */
+
+#sectionOne {
+  /* would like nav to go at the top */
+  padding: 0 4px;
+
+}
+/* make single h1 on page = active side nav option - h1 is too big fudge smaller */
+#sidebarNav h1 {
+		font-size: 100%;
+		margin-bottom: 0px; /* default for h1 was .4rem - disaster ! */
+}
+
+.item1, .item2, .item3, .item4 {
+	padding: 0px 4px;
+}
+
+.outerBox { 
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	
+	width: 100%;
+	display: table;
+}
+.innerBox {
+	margin-right: 0px;
+	margin-left: 0px;
+	display: table-cell;
+	width: 100%; 
+}
+
+.product {
+	
+}
+.longFooter{
+	margin-top: 20px;
+	padding: 20px;
+	margin-bottom: 20px;
+	
+}
+.footerInnerCol{
+	border-bottom: 1px solid  green; 
+	border-right: 1px solid  green; 
+	border-left: 1px solid  green; 
+	padding-top: 10px;
+	font-size: 70%;
+}
+.footerInnerCol p {
+	font: 60%;
+}
+.footerInnerCol h4 {
+	color: green; 
+	font-size: 100%;
+}
+.footerInnerCol a {
+	color: grey;
+	font-size: 70%;
+}
+.innerBox img {
+	max-width: 100%;
+	width: 100%;
+	margin-top: 8px;
+	vertical-align: middle;
+	
+	
+}
+.innerBox h2 {
+	color: white;
+	position: absolute; /* shift up the heading over the img (w3-schools)*/
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.innerBox p {  /* this is the pricing information - make it into an avatar like circle */
+	color: black;
+	background-color: white;
+	border-radius: 50%;
+	padding: 5px;
+	border: 1px solid gray;
+	
+	position: absolute; /* shift up the heading over the img (w3-schools)*/
+	top: 85%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#footer-row1 {
+	border-top: 1px solid green; 
+	
+	background-color: white;
+}
+#footer-row2 {
+	border-top: 1px solid green; 
+	background-color: white;
+}
+
+#footer-row1 div {
+	
+}
+.social {
+	padding-bottom: 10px;
+}
+
+
+.footerInnerCol .last {
+	border-right: none; 
+}
+#footer-row2 .footerInnerCol{
+	border-bottom: 1px solid green; 
+}
+.italic-link{
+	font-style: italic;
+}
+.lightishGrey{
+	color: LightGray;
+}
+.darkishGrey{
+	color: rgba(255,255,255,.5); /* using the navliink text colour */
+}
+.greenBurst{
+	color: green; 
+}
+.smallPrint{
+	font-size: 55%;
+}
+
+@media (min-width: 768px) {
+	
+  #middleSection {
+	  margin-top: 100px;
+  }
+  .footerInnerCol{
+	border-right: 1px solid  green; 
+	border-left: none;
+	}
+	
+	.footerInnerCol.first{ /* should be only one with a border-left */
+		border-right:  1px solid  green;
+		border-left: 1px solid  green; 
+	}
+}
