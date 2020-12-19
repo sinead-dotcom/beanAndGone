@@ -1,0 +1,399 @@
+<!-- subscription.html
+The is the about page.
+@Sinead Bradley x20147511
+1 Dec 2020
+CA3 final group project
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<!-- to get proper rendering and touch zooming -->
+	<meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1.0">
+	<title>Subscribe to Bean &amp; Gone</title><!--under 56-->
+	<meta charset="utf-8">
+	
+	<meta name="description" content="Bean & Gone supplies coffee and coffee merchandise to businesses and individuals. Also provides 
+				wholesale products."><!-- below 160/130 -->
+	<!--link rel="canonical" href="https://sinead-dotcom.github.io/beanAndGone/" /-->
+	<meta name="author" content="Sinead Bradley">
+	<meta name="robots" content="noindex, nofollow"><!-- as this is just a STUDENT PROJECT and not a real business -->
+	<!--meta name="robots" content="index, follow"-->
+	
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Subscribe to Bean & Gone" />
+	<meta property="og:description" content="Bean & Gone supplies coffee and coffee merchandise to businesses and individuals. Also provides 
+				wholesale products." />
+	<meta property="og:image" content="brand-2x-sinead.png" /> <!-- need a x2 -->
+	<meta property="og:url" content="https://sinead-dotcom.github.io/beanAndGone" />
+	<meta property="og:site_name" content="Bean & Gone" />
+ 
+	<!-- twitter tags 
+	<meta name="twitter:title" content="TITLE OF POST OR PAGE">
+	<meta name="twitter:description" content="DESCRIPTION OF PAGE CONTENT">
+	<meta name="twitter:image" content="LINK TO IMAGE">
+	<meta name="twitter:site" content="@USERNAME">
+	<meta name="twitter:creator" content="@USERNAME">
+	-->
+	
+	<!--[if lte IE9]>
+	<script src="http://css3-mediaqueriesjs.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+	<![endif]-->
+	
+	 <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+	
+	
+	<!-- bootstrap v4.5 requirements from getbootstrap.com -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	
+	<!-- project style sheet -->
+	<link href="css/style-sinead.css" rel="stylesheet" />
+	<!--link href="css/rob-style.css" rel="stylesheet" /-->
+	
+	</head>
+	<body>
+		
+		<div class="container-fluid fillHeight">
+			<div class="row fillHeight"><!-- contains 1. sidebar 2. main section -->
+			
+				<!--nav class="col-md-3 d-md-block bg-dark text-white sidebar collapse" id="sidebar"-->
+				<nav class="navbar navbar-dark  col-md-3 d-md-block bg-dark text-white sidebar" id="sidebar">
+				
+					<!-- js to toggle this button to show/hide sideBarNav when in mobile form -->
+					<button type="button" id="sidebarButton" class="navbar-toggler"> <!-- navbar-toggler gives the nice icon -->
+							<span class="navbar-toggler-icon"></span>
+					</button>
+					<a class="navbar-brand coffeeBrand" title="Home: Bean & Gone" href="index.html">
+						<!-- alt for images: 16 words max 50-55 char -->
+						<img class="active" src="images/beanAndGone.png" alt="Bean & Gone logo: coffee roaster & merchandise" >
+						<!--img src="images/brand-2x-rob.png" alt="Bean & Gone logo: coffee roaster & merchandise" -->
+					</a>
+					
+					<div class="navbar-collapse" id="sidebarNav"><!-- js to add/remove active to class to show/hide this -->
+						<hr class="hrInSideNav">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link" href="about.html">About</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active" href="subscription.html">Subscriptions</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="shop-merchandise.html"><h1>Coffee Merchandise</h1></a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="coffee-menu.html">Coffee Menu</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="wholesale.html">Wholesale</a>
+							</li>
+						</ul>
+					</div>
+				
+					<div class="coffeeContactInfo ">
+						<hr class="hrInSideNav ">
+						<p class="lightishGrey">Bean &amp; Gone<br> Coffee Makers </p>
+						<a class="infoLink text-white" href="mailto:bearandgone@gmail.com">bearandgone@gmail.com</a>
+						<br>
+						<p class="siteCredits darkishGrey">Site by:  <a class="text-white" href="www.teamK.com" >Team K</a></p>
+					</div>
+				
+				</nav>
+				
+				<!-- shift this main section in by the width of the sidebar-->
+				<div class="col-md-9 offset-md-3 d-md-block" id="topNavBar">
+					<nav class="navbar navbar-light bg-light text-dark navbar-expand" id="topNavigation">
+						
+						<ul class="nav navbar-nav ml-auto"><!-- ml-auto to shift items to the right! -->
+								
+								<li class="nav-item">
+									<a class="nav-link" href="#">Login<span class="sr-only">(current)</span></a></li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Items</a></li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Total</a></li>
+								<li class="nav-item">
+									<a class="nav-link makeOrange" href="#">My Cart<span class="sr-only">(current)</span></a>
+								</li>
+						</ul>
+					</nav>
+				</div>
+				
+				<div class="col-md-9 offset-md-3 d-md-block" id="middleSection"> <!-- rest of page - to center the content -->
+	
+					<div class="row pb-3" id="sectionOne">
+							<!-- put in a jumbotron -->	
+							<div class="jumbotron jumbotron-fluid">
+								<div class="container">
+									<h1>SUBSCRIBE</h1>
+								</div>
+							</div>
+					</div>
+				
+					
+					<div class="row g-3 mt-2">
+					  <div class="col-md-5 col-lg-4 order-md-last">
+						<h4 class="d-flex justify-content-between align-items-center mb-3">
+						  <span class="text-muted">Cart</span>
+						  <span class="badge bg-secondary rounded-pill">3</span>
+						</h4>
+						<ul class="list-group mb-3">
+						  <li class="list-group-item d-flex justify-content-between lh-sm">
+							<div>
+							  <h6 class="my-0">Subscription</h6>
+							  <small class="text-muted">Brief description</small>
+							</div>
+							<span class="text-muted">&euro;100</span>
+						  </li>
+						  <li class="list-group-item d-flex justify-content-between">
+							<span>Total (&euro;)</span>
+							<strong>&euro;100</strong>
+						  </li>
+						</ul>
+
+					  </div><!-- col-md-5-->
+						<div class="col-md-7 col-lg-8">
+						<h4 class="mb-3">Billing address</h4>
+						<!-- As have NO server backend - simulation - using email - when successful -->
+						<form  class="needs-validation secondForm" method="post" enctype="text/plain" action="mailto:x20147511@student.ncirl.ie?subject=myform_submission&body=You successfully completed a subscription"><!-- want custom validation -->
+						<!--form  class="needs-validation secondForm" action="javascript:alert( 'success!' );" --><!-- want custom validation -->
+						
+							<div class="row g-3">
+								<div class="col-sm-6">
+								  <label for="given-name" class="form-label">First name</label>
+								  <!-- use HTML standards based tab names for inputs - helps with autofill/autocomplete -->
+								  <input autocomplete="name given-name fullname" type="text" class="form-control" id="given-name" placeholder="" value="" required="">
+								  <div class="invalid-feedback" id="given-name-Feedback">
+									Valid first name is required.
+								  </div>
+								  <div class="valid-feedback">
+									Valid firstname - thanks!
+									</div>
+								</div>
+
+								<div class="col-sm-6">
+								  <label for="family-Name" class="form-label">Last name</label>
+								  <input type="text" class="form-control" id="family-name" placeholder="Family name" value="" required="">
+								  <div class="invalid-feedback">
+									Valid last name is required.
+								  </div>
+								  <div class="valid-feedback">
+									Valid last name - thanks!
+								  </div>
+								</div>
+
+
+								<div class="col-12 mt-4">
+								  <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+								  <input type="email" class="form-control" id="email" placeholder="you@example.com">
+								  <div class="invalid-feedback">
+									Please enter a valid email address for shipping updates.
+								  </div>
+								</div>
+
+								<div class="col-12 mt-4">
+								  <label for="address-line1" class="form-label">Address</label>
+								  <input type="text" class="form-control" id="address-line1" placeholder="1234 Main St" required="">
+								  <div class="invalid-feedback">
+									Please enter your shipping address.
+								  </div>
+								</div>
+
+								<div class="col-12 mt-4">
+								  <label for="address-line2 class="form-label">Address 2 <span class="text-muted"></span></label>
+								  <input type="text" class="form-control" id="address-line2" placeholder="Apartment or suite" required>
+									<div class="invalid-feedback">
+										Please provide a valid city.
+									</div>
+								</div>
+								
+								<div class="col-md-4 mt-4">
+								  <label for="postal-code" class="form-label">Postal code</label>
+								  <input type="text" class="form-control" id="postal-code" placeholder="Postal code" required="">
+								  <div class="invalid-feedback">
+									Postal code required.
+								  </div>
+								  <div class="invalid-feedback">
+									Please select a valid Post code
+								  </div>
+								</div>
+								
+								<div class="col-md-4 mt-4">
+								  <label for="country-name" class="form-label">Country</label>
+								  <select class="form-select" id="country-name" required="">
+									<option value="">Choose...</option>
+									<option selected="selected">Ireland</option>
+								  </select>
+								  <div class="invalid-feedback">
+									Please select a valid country.
+								  </div>
+								</div>
+
+								<div class="col-md-4  mt-4">
+								  <label for="state" class="form-label">County</label>
+								  <select class="form-select" id="state" required="">
+									<option value="">Choose...</option>
+									<option selected="selected">Dublin</option><option>Cork</option><option>Galway</option><option>Mayo</option><option>Kildare</option>
+								  </select>
+								  <div class="invalid-feedback">
+									Please provide a valid county.
+								  </div>
+								</div>
+
+								
+							</div>
+
+							<hr class="my-4">
+
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input" id="terms-and-conditions" required>
+								<label class="form-check-label" for="terms-and-conditions">Agree to terms &amp; conditions</label>
+							</div>
+
+
+							<hr class="my-4">
+
+							<h4 class="mb-3">Payment</h4>
+
+							<div class="my-3">
+								<div class="form-check">
+								  <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked="" required="">
+								  <label class="form-check-label" for="credit">Credit card</label>
+								</div>
+								<div class="form-check">
+								  <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required="">
+								  <label class="form-check-label" for="debit">Debit card</label>
+								</div>
+								<div class="form-check">
+								  <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required="">
+								  <label class="form-check-label" for="paypal">PayPal</label>
+								</div>
+							</div>
+
+							<div class="row gy-3">
+								<div class="col-md-6">
+								  <label for="cc-name" class="form-label">Name on card</label>
+								  <input type="text" class="form-control" id="cc-name" placeholder="Firstname Surname" required="">
+								  <small class="text-muted">Full name as displayed on card</small>
+								  <div class="invalid-feedback">
+									Name on card is required
+								  </div>
+								</div>
+
+								<div class="col-md-6">
+								  <label for="cc-number" class="form-label">Credit card number</label>
+								  <input type="text" class="form-control" id="cc-number" placeholder="Credit card number" required="">
+								  <div class="invalid-feedback">
+									Credit card number is required
+								  </div>
+								</div>
+
+								<div class="col-md-3 mt-3">
+								  <label for="cc-expiration" class="form-label">Expiration</label>
+								  <input type="text" class="form-control" id="cc-expiration" placeholder="mm/yy" required="">
+								  <div class="invalid-feedback">
+									Expiration date required
+								  </div>
+								</div>
+
+								<div class="col-md-3 mt-3">
+								  <label for="cc-cvv" class="form-label">CVV</label>
+								  <input type="text" class="form-control" id="cc-cvv" placeholder="XXX" required="">
+								  <div class="invalid-feedback">
+									Security code required
+								  </div>
+								</div>
+							</div>
+
+							<hr class="my-4">
+
+							<button class="w-100 btn btn-warning btn-lg" type="submit"  >Continue to checkout</button>
+						</form><!-- secondForm -->
+					</div>
+					</div>
+					
+					
+					
+				
+				</div><!-- middlesection col -->
+				
+				
+			</div>	
+			<!-- stretch out the footer in this page as it looks better -->
+			<div class="longFooter col-md-9 offset-md-3 d-md-block pl-0 pr-0">	
+					<!--div class="keepAtBottom"-->
+					<div class="row alignWithSubscription" id="footer-row1-sub"> <!--divide equally in 3 columns -->				
+							<div class="footerInnerCol first col-md-4 col-lg-4 ">
+								<h4 class="footerHeading">Drink our Coffee here!</h4>
+								<p>Our coffee is sold throughout the world.
+									<br><a class="darkishGrey italic-link" href="#">Where you can drink our coffee</a>								
+								</p>
+							</div>
+							
+							<div class="footerInnerCol col-md-4 col-lg-4 ">
+								<h4 class="footerHeading">Questions?</h4>
+								<p>
+									<a class="darkishGrey italic-link" href="faq.html">FAQ's</a>	
+									<br><a class="darkishGrey italic-link" href="#">Privacy Policy</a>	
+									<br><a class="darkishGrey italic-link" href="#">Terms & Conditions</a>	
+									<br><a class="darkishGrey italic-link" href="#">Site map</a>										
+								</p>
+							</div>
+							<div class="footerInnerCol col-md-4 col-lg-4">
+								<h4>Contact</h4>
+								<p >
+									<em>phone: </em><a class="darkishGrey italic-link" href="tel:+353111111">+353111111</a>
+									<br><em>email: </em><a class="darkishGrey italic-link" href="mailto:bearandgone@gmail.com">bearandgone@gmail.com</a>
+								</p>
+								<div class="social">
+									<a href="https://twitter.com/beargone1">
+										<img src="images/Twitter_Social_Icon_Square_Color.png" alt="Bean & Gone Twitter feed" width="16" height="16">
+									</a>
+									<a href="https://www.facebook.com/bear.andgone.5/">
+										<img src="images/f_logo_RGB-Black_58.png" alt="Bean & Gone Facebook account" width="16" height="16">
+									</a>
+								</div>
+							</div>
+					
+					</div>
+			</div> <!-- long footer -->
+			<!-- top level row -->
+		</div><!-- container -->
+				
+		
+		<!-- getbootstrap.com v4.5 -->
+		<!-- slideToggle() not working with code.jquery CDN lib, Google lib jquery lib throws no runtime error -->
+		<!--script src="hhhttps://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script-->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
+	
+		
+		<!-- requirements from getbootstrap.com v4.5 -- KEEP near end of body -->
+		<!-- script src="hhhhttps://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script-->
+		<!-- comment out to use bootstrap V5 beta - it does cool form validation-->
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>		  
+		<script src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@master/dist/latest/bootstrap-autocomplete.min.js"></script>
+		
+
+		<!-- local js/jquery -->
+		<script src="js/coffee-sinead-js.js"></script>
+		<script src="js/rob.js"></script>
+	</body>
+</html>

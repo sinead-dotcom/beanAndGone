@@ -1,9 +1,3 @@
-/*-- style-sinead.css
-@Sinead Bradley x20147511
-
-1 Dec 2020
-CA3 final group project
-*/
 /*
  * Bootstrap Dashboard template 
  */
@@ -12,6 +6,12 @@ CA3 final group project
 body {
 	background-color: #f2f2f2; /* no websafe equivalent - this color is too nice to ditch for a light/gray */
 	min-width: 456px;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 0 0 0;
+	min-height: 100%;
+	width: 100%;
+	/*font-size: 100%; *//*going to use em to allow broser to resize */
+}
 }
 
 #sidebar {
@@ -40,12 +40,20 @@ body {
 	margin-bottom: 0px;
 }
 .hrInSideNav {
-	background-color: green; 
+	background-color: orange; /* powerpoint orangeburst template - but used color safe web colour instead */
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 .hrAfterBrand {
 	clear: left;
 	display: block;
 
+}
+.hrDivider {
+	background-color: orange;
+	color: green;
+	clear: left;
+	display: block;
 }
 .coffeeBrand {
 	  margin-left: auto;
@@ -61,9 +69,12 @@ body {
 	min-width: 100%;
 	width: 100%;
   }
- 
+  .coffeeBrand .active  {
+	 border: 2px solid white;
+	}
 	.coffeeContactInfo {
 		display: none;
+	
 	}
 
 #sidebarButton { /* for smaller screens; position the button to top left... */
@@ -78,31 +89,29 @@ body {
 	height: 48px;
 }
 
-.makeGreen{
+.makeOrange{
 	text-decoration: underline;
-	text-decoration-color:  green;
-}
-.jumbotron {
-	background-color: white;
-	background-image: url('../images/about/coffee-jumbo2.jpg');
-	background-attachment: fixed; /* image fixed to back to page, it scrolls at a differnt rate  */
-	background-repeat: none;
-	background-size: cover;
-	color: white;
-	text-align: center;
-	min-height: 200px; /* make it bigger if want */
-	margin-bottom: 0px; 
-	width: 100%;
-}
-.aboutPageDetails {
-	margin-top: 20px;
-	/*margin-bottom: 10px;*/
-}
-.aboutPageDetails h1 {
-	text-align: center;
+	text-decoration-color:  orange; /* color safe orange */
 }
 
+
+.cloneProduct { /*SB*/
+	display: none;
+}
+
+#footer-row1-sub {
+	border-top: 1px solid orange; 
+	margin-left: 0px;
+	margin-right: 0px;
+	background-color: white;
+}
+
+
 @media (min-width: 768px) {
+
+.cloneProduct {  /*SB*/
+	display: none;
+}
 	#sidebarButton { /* not displayed for bigger screens... when not collapsed */
 		display: none;
 	}
@@ -122,13 +131,14 @@ body {
   }
   .coffeeContactInfo {
 		display: block;
+		bottom: 30px;
 	}
   .coffeeBrand {
 	  margin-left: auto;
 	  margin-right: auto;
 	  width: 150px;
-	  margin-bottom: 20px;
-	  margin-top: 20px;
+	  margin-bottom: 30px;
+	  margin-top: 30px;
 	  text-align: center;
 	  display: block;
   }
@@ -136,9 +146,10 @@ body {
 	max-width: 100%;
 	min-width: 100%;
 	width: 100%;
-	
   }
-
+ .coffeeBrand .active  {
+	 border: 2px solid white;
+	}
  
   #topNavBar {/*need to make this fixed */
 	position: fixed;
@@ -164,12 +175,15 @@ body {
 	  font-size: 65%;
   }
   .coffeeContactInfo .siteCredits {
-	  padding: 10px;
+	 /* padding: 10px;*/
 	  font-size: 65%;
   }
   .coffeeContactInfo .infoLink {
 	
   }
+  
+  
+
   /* Sidebar navigation */
 
 	#sidebarNav {
@@ -188,11 +202,13 @@ body {
 		margin-left: 0;
 		margin-right: 0px;
 	}
-	#sidebarNav > li > a {
+	#sidebarNav li a {
 		margin-left: 0px;
 		margin-right: 0px;
-	  padding-right: 20px;
-	  padding-left: 20px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+	  padding-right: 0px;
+	  padding-left: 0px;
 	}
 	#sidebarNav > .active > a,
 	#sidebarNav > .active > a:hover,
@@ -206,6 +222,19 @@ body {
 		font-size: 100%;
 		margin-bottom: 0px; /* default for h1 was .4rem - disaster ! */
 	}
+	.jumbotron {
+		background-color: white;
+		background-image: url('../images/about/coffee-jumbo2.jpg');
+		background-attachment: fixed; /* image fixed to back to page, it scrolls at a differnt rate  */
+		background-repeat: none;
+		background-size: cover;
+		color: white;
+		text-align: center;
+		min-height: 200px; /* make it bigger if want */
+		margin-bottom: 0px; 
+		width: 100%;
+	}
+
 	.aboutPageDetails {
 		margin-top: 20px;
 		/*margin-bottom: 10px;*/
@@ -216,15 +245,68 @@ body {
 	.aboutPageDetails h2 {
 		text-align: center;
 	}
+	.heroItem1, .heroItem2, .heroItem3, .heroItem4 {
+		padding: 0px 4px;
+	}
+	.heroItem2 h2, .heroItem3 h2{
+		font-size: 100%;
+	}
+	.heroItem3 h2 {
+		color: white;
+		position: absolute; /* shift up the heading over the img (w3-schools)*/
+		top: 75%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.productBox .outerBox {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		min-height: 300px;
+	}
+	.productBox .innerBox {
+		border: 1px solid white;
+	}
+	.productImage {
+		 
+	}
+	
+	#sectionTwo {
+		background-color: #f2f2f2;
+		padding-bottom: 30px;
+	}
+	.bd-example {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: 1px;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+		margin-right: 0;
+		margin-left: 0;
+		border: 1px solid grey;
+		padding-top: 20px;
+	}
+	#footer-row1-sub {
+		border-top: 1px solid orange; 
+		margin-left: 10px;
+		margin-right: 0px;
+		background-color: white;
+	}
 }
   
 /*
  * Middle section
  */
+ #middleSection {	  
+	margin-top: 100px;
+	  /*SB */
+	
+  }
 
 #sectionOne {
   /* would like nav to go at the top */
   padding: 0 4px;
+
 
 }
 /* make single h1 on page = active side nav option - h1 is too big fudge smaller */
@@ -232,10 +314,11 @@ body {
 		font-size: 100%;
 		margin-bottom: 0px; /* default for h1 was .4rem - disaster ! */
 }
-
 .item1, .item2, .item3, .item4 {
 	padding: 0px 4px;
 }
+
+
 
 .outerBox { 
 	padding-top: 5px;
@@ -247,6 +330,7 @@ body {
 	
 	width: 100%;
 	display: table;
+	
 }
 .innerBox {
 	margin-right: 0px;
@@ -254,20 +338,30 @@ body {
 	display: table-cell;
 	width: 100%; 
 }
-
-.product {
-	
+.interior {
+	display: table;
+    width: 100%;
+    height: 100%;
+}
+.centerCell {
+	display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.productBox {
+	padding: 0px 4px;
 }
 .longFooter{
-	margin-top: 20px;
+	margin-top: 0px;
 	padding: 20px;
-	margin-bottom: 20px;
-	
+	padding-bottom: 5px;
+	/*margin-bottom: 20px;*/
+
 }
 .footerInnerCol{
-	border-bottom: 1px solid  green; 
-	border-right: 1px solid  green; 
-	border-left: 1px solid  green; 
+	border-bottom: 1px solid  orange; 
+	border-right: 1px solid  orange; 
+	border-left: 1px solid  orange; 
 	padding-top: 10px;
 	font-size: 70%;
 }
@@ -275,7 +369,7 @@ body {
 	font: 60%;
 }
 .footerInnerCol h4 {
-	color: green; 
+	color: orange; 
 	font-size: 100%;
 }
 .footerInnerCol a {
@@ -287,8 +381,12 @@ body {
 	width: 100%;
 	margin-top: 8px;
 	vertical-align: middle;
-	
-	
+}
+.productButton {
+	max-width: 100%;
+	width: 100%;
+	margin-top: 8px;
+	vertical-align: middle;
 }
 .innerBox h2 {
 	color: white;
@@ -310,12 +408,13 @@ body {
 	transform: translate(-50%, -50%);
 }
 #footer-row1 {
-	border-top: 1px solid green; 
-	
+	border-top: 1px solid orange; 
+	margin-left: -15px;
 	background-color: white;
 }
+
 #footer-row2 {
-	border-top: 1px solid green; 
+	border-top: 1px solid orange; 
 	background-color: white;
 }
 
@@ -331,7 +430,7 @@ body {
 	border-right: none; 
 }
 #footer-row2 .footerInnerCol{
-	border-bottom: 1px solid green; 
+	border-bottom: 1px solid orange; 
 }
 .italic-link{
 	font-style: italic;
@@ -342,25 +441,326 @@ body {
 .darkishGrey{
 	color: rgba(255,255,255,.5); /* using the navliink text colour */
 }
-.greenBurst{
-	color: green; 
+.darkGray{
+	color: DarkSlateGray;
+}
+.orangeBurst{
+	color: orange; /* orange from powerpoint orangeburst presentation - but color safe alternative */
 }
 .smallPrint{
 	font-size: 55%;
 }
+.jumbotron {
+	background-color: white;
+	background-image: url('../images/about/coffee-jumbo2.jpg');
+	background-attachment: fixed; /* image fixed to back to page, it scrolls at a differnt rate  */
+	background-repeat: none;
+	background-size: cover;
+	color: white;
+	text-align: center;
+	min-height: 200px; /* make it bigger if want */
+	margin-bottom: 0px; 
+	width: 100%;
+}
+.aboutPageDetails {
+	margin-top: 20px;
+	/*margin-bottom: 10px;*/
+}
+.aboutPageDetails h1 {
+	text-align: center;
+}
+
 
 @media (min-width: 768px) {
 	
+	
   #middleSection {
 	  margin-top: 100px;
+	  
+	  /*SB*/
+	 
   }
   .footerInnerCol{
-	border-right: 1px solid  green; 
+	border-right: 1px solid  orange; 
 	border-left: none;
 	}
 	
 	.footerInnerCol.first{ /* should be only one with a border-left */
-		border-right:  1px solid  green;
-		border-left: 1px solid  green; 
+		border-right:  1px solid  orange;
+		border-left: 1px solid  orange; 
+	}
+	.productBox {
+		padding: 0px 4px;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+    }
+	
+	.outerProductBox {
+		display: table;
+		width: 100%;
+		height: 100%;
+		
+	}
+	.innerProductBox {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+	
+	.innerProductBox h2 {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		
+	}
+	.pInnerBox  {
+		padding: 20px;
+		width: 76px;
+		height: 76px;
+		border-radius: 50%;
+		margin-left: auto; /* center the circle horiz */
+		margin-right: auto;
+		vertical-align: middle;
+		text-align: center;
+		
+	}
+
+	.productPic .innerBox h2 {
+		top: 25%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.productPic .pInnerBox{
+		top: 55%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		padding: 20px;
+	}
+	.productPic {
+		padding: 0px 4px;
+	}
+	.alignWithAccordion{ /* out -15px left and right */
+		margin-left: 0px;
+		margin-right: 0px; 
+		bottom: 0px;
+	}
+	.alignWithSubscription {/* out -15px left and right */
+		margin-left: 7px;
+		margin-right: 7px; 
+		bottom: 0px;
+	}
+	#sectionThree {
+		padding: 0 4px;
+	}
+	.leftCol{
+		margin-left: -15px;
+		background-color: pink;
+		height: 100%;
+		padding: 10px;
+	}
+	.rightCol{
+		margin-left: -15px;
+		margin-right: -15px;
+		padding: 10px;
+		background-color: green;
+		height: 100%;
+	}
+
+}
+
+
+.heroItem1, .heroItem2, .heroItem3, .heroItem4 {
+	padding: 0px 4px;
+}
+.heroItem2 h2, .heroItem3 h2{
+	font-size: 150%;
+}
+.heroItem3 h2 {
+	color: white;
+	position: absolute; /* shift up the heading over the img (w3-schools)*/
+	top: 90%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.btn-warning{
+	background-color: orange;
+	color: white;
+	border-radius: 0px;
+}
+.margin-auto-lr {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section2Product {
+	
+	/*background-color: white;*/
+	padding: 20px;
+}
+.section2Product p {
+	
+}
+.productBox {
+		padding: 0px 4px;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+}
+.outerProductBox {
+	display: table;
+	width: 100%;
+	height: 100%;
+	
+}
+.innerProductBox {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+}
+.innerProductBox h2 {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		
+}
+.pInnerBox{
+	padding: 20px;
+	width: 76px;
+	height: 76px;
+	border-radius: 50%;
+	margin-left: auto; /* center the circle horiz */
+	margin-right: auto;
+	vertical-align: middle;
+	text-align: center;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+#sectionTwo {
+	background-color: #f2f2f2;
+	padding-bottom: 30px;
+}
+.alignWithAccordion{ /* out -15px left and right */
+	margin-left: 0px;
+	margin-right: 0px; 
+	bottom: 0px;
+}
+.keepAtBottom{
+	display: block;
+	margin-bottom: 0px;
+}
+.fillHeight{
+	min-height: calc(100vh); /* make sure that footer at min is at bottom of screen! */
+}
+.internalCardPad{
+	padding: .75rem 1.25rem;
+}
+
+
+@media (min-width: 768px) {
+		
+	.bd-example {
+		position: relative;
+		padding: 1rem;
+		margin-top: 1rem;
+		margin-left: 5px;
+		margin-right: 5px;
+		border: solid #dee2e6;
+		border-width: 1px 0 0;
+		position: relative; 
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+		border: 1px solid grey;
+		padding-top: 20px;
+		width: 100%;
+	}
+	.bd-example:last-child {
+		margin-bottom: 0;
+	}
+	.modal-dialog {
+		max-width: 500px;
+		width: auto;
+		/*margin: 1.75rem auto;
+		margin-top: 50px;
+		margin-left: auto;
+		margin-right: auto;
+		min-height: calc(100vh);*/
+		position: absolute; /* shift up the heading over the img (w3-schools)*/
+		top: 25%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 }
+
+.bd-example::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.accordion-header {
+    margin-bottom: 0;
+}
+.accordion-collapse {
+    border: solid rgba(0,0,0,.125);
+	border: 1px solid pink;
+    border-width: 0 1px;
+}
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #0c63e4;
+    background-color: #e7f1ff;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+}
+.accordion-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: #212529;
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0;
+    overflow-anchor: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
+}
+
+.accordion-button::after {
+    flex-shrink: 0;
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-left: auto;
+    content: "";
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    transition: transform .2s ease-in-out;
+}
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+   transform: rotate(180deg);
+}
+
+.accordion-body {
+    padding: 1rem 1.25rem;
+}
+
+
+
+#sectionThree {
+	padding: 0 4px;
+}
+.accordionRow, #accordionFlushExample{
+	width: 100%;
+}
+.show{
+	display: none;
+}
+
