@@ -3,7 +3,7 @@
 	@Sinead Bradley x20147511@student.ncirl.ie
 	9 dec 2020
 	
-	https://github.com/sinead-dotcom/
+	https://sinead-dotcom.github.io/beanAndGoneCoffee/
 	
 	alpha V10.02
 	Would like to load up the product images from a DataBase - since not done DBs yet,
@@ -122,14 +122,14 @@ $(function(){
 	$('#sidebarButton').on('click', function(){
 		$("#sidebarNav").slideToggle("slow");
 	});
-	if (document.title === "Bean & Gone Merchandise Product") {
+	if (document.title === "Bean & Gone Coffee Merchandise Product") {
 		//Does cookie tell us what product to load
 		let thisProduct = getCookie("product");
 		if (thisProduct !== ""){
 			let xx=10;
 			loadThisProduct(thisProduct);
 		}
-	} else if (document.title === "Shop Coffee Merchandise at Bear & Gone") {
+	} else if (document.title === "Shop Coffee Merchandise at Bean & Gone Coffee") {
 		//load all the proudcts to display
 		loadProducts();
 		$('.acceptCookies').on('click', function(){
@@ -145,10 +145,10 @@ $(function(){
 								backdrop: 'static'
 							})
 		}
-	} else if (document.title === "Subscribe to Bean & Gone") {
+	} else if (document.title === "Subscribe to Bean & Gone Coffee") {
 		initSubscribeForm();
 		// rest are function
-	} else if (document.title === "FAQ Bean & Gone") {
+	} else if (document.title === "FAQ Bean & Gone Coffee") {
 		initFAQForm();
 		var z=4;
 	}	
