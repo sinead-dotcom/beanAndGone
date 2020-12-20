@@ -4,4 +4,4 @@ Crawl-delay: 10
 User-agent: slurp
 Crawl-delay: 115
 
-Sitemap: https://sinead-dotcom.github.io/beanAndGoneCoffee/sitemap.xml
+Sitemap: https://sinead-dotcom.github.io/beanAndGone/sitemap.xml
