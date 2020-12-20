@@ -16,7 +16,7 @@ $(function(){
 		
 	//constants
 	const euro = "\u20ac"; /* euro sign */
-	const totalNumProducts = 12; /* don't need this any longer */
+	const totalNumProducts = 12; /*hard code it for now */
 	//we haven't done JSON or Databases so using simple arrays to store relevant product information */
 	const  merchandiseFileNames = ["images/merchandise/naf-drip-brewer.jpg",
 									"images/merchandise/espresso-maker-on-white-stone-counter.jpg",
@@ -126,16 +126,16 @@ $(function(){
 		//Does cookie tell us what product to load
 		let thisProduct = getCookie("product");
 		if (thisProduct !== ""){
+			let xx=10;
 			loadThisProduct(thisProduct);
 		}
 	} else if (document.title === "Shop Coffee Merchandise at Bean & Gone Coffee") {
-		//load all the products to display
+		//load all the proudcts to display
 		loadProducts();
-		//This is what's called when click "allow cookies"
-		//the user the option of using cookies or not - nice modal from Bootstrap
 		$('.acceptCookies').on('click', function(){
 			setCookie("allowCookies",'yes',1);		
 			$('#staticBackdrop').modal('hide');
+			
 		});
 		
 		//Does cookie tell us what product to load
@@ -147,14 +147,16 @@ $(function(){
 		}
 	} else if (document.title === "Subscribe to Bean & Gone Coffee") {
 		initSubscribeForm();
+		// rest are function
 	} else if (document.title === "FAQ Bean & Gone Coffee") {
 		initFAQForm();
+		var z=4;
 	}	
 		
 	
 	
 	/* the supporting function */
-	function initFAQForm(){  //get the bootstrap v5 accordion function to work with v4.x - fun!
+	function initFAQForm(){
 		$('.accordion-button').on('click', function(){
 			var $theTarget = $(this).data();
 			var $target = $theTarget.bsTarget;
@@ -177,7 +179,7 @@ $(function(){
 	
 	function initSubscribeForm() {
 		  'use strict'
-		  // apply custom Bootstrap validation styles to
+		  // Fetch all the forms we want to apply custom Bootstrap validation styles to
 			var $form2 = $('.secondForm');
 
 			/* This is what is called when the submit button is clicked
@@ -202,7 +204,7 @@ $(function(){
 	
 	//<!--<form id="orderForm" action="mailto:x20147511@student.ncirl.ie" method="post" enctype="text/plain" autocomplete="off">
 	//					<form id="orderForm" action="order.php" method="post" onsubmit="return checkInfo();"/>-->
-	//using bootstrap forms - makes it easy - just set the msg and add/remove class
+						
 	function validateForm2(){
 		
 		//first-name validation
@@ -215,10 +217,12 @@ $(function(){
 		//family-name validation - Come back after inital testing - PUT IN ONE BIG IF statement 
 		let regexCheckFamily =  /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/; //surname
 		var $familyName = $('#family-name');
+		//$familyName[0].setCustomValidity('Passwords must match');
 		
 		if ($familyName.val() === '') {
           $familyName.focus();
 		  /* it's already set in .html $familyName[0].setCustomValidity('Please enter a valid first name');*/
+		  //$('#given-name-Feedback').text('Valid first name is required.');
 		  $familyName[0].classList.add('is-invalid');
 		  $familyName[0].classList.remove('is-valid');
           return false;
@@ -243,6 +247,8 @@ $(function(){
 		//Validate e-mail
 		//email validation - Come back after inital testing - PUT IN ONE BIG IF statement 
 		let regexCheckEmail = /[^@]+@[^@]+/; //email - simple validation
+		//https://www.w3.org/TR/html52/sec-forms.html#form-submission-algorithm
+		///^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
 		
 		var $email = $('#email');
 		
@@ -302,6 +308,8 @@ $(function(){
 		
 		if ($ccNumber.val() === '') {
           $ccNumber.focus();
+		  /* it's already set in .html $ccNumber[0].setCustomValidity('Please enter a valid first name');*/
+		  //$('#given-name-Feedback').text('Valid first name is required.');
 		  $ccNumber[0].classList.add('is-invalid');
 		   $ccNumber[0].classList.remove('is-valid');
           return false;
@@ -327,6 +335,8 @@ $(function(){
 		//Validate credit card expiration
 		//credit card expiration validation - Come back after inital testing - PUT IN ONE BIG IF statement 
 		let regexExpiration =     /^\d{2}\/\d{2}$/;
+		/*/^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/;*/
+								  /* /^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/; */
 		var $ccExpiration = $('#cc-expiration');
 		
 		if ($ccExpiration.val() === '') {
@@ -381,6 +391,8 @@ $(function(){
 		}
 		return true; //so that it can post the subscription!
 	}
+
+	//form.classList.add('was-validated')
 			
 	
 	function loadThisProduct(i){
@@ -399,6 +411,7 @@ $(function(){
 										let jj = 15;
 											}
 		);
+
 		//Set the Product Img
 		$newProductPic = $(".productPic")
 		$newProductPic.children().first().children().first().children().first().attr("src", merchandiseFileNames[i]);  //product img
@@ -411,7 +424,7 @@ $(function(){
 	}
 
 	function addProductToOrder(i){
-		let zz=10; //breakpoint in debugger
+		let zz=10;
 	}
 	
 	function loadProducts(){
@@ -427,6 +440,7 @@ $(function(){
 			$newProduct.children().first().children().first().children().eq(2).text(merchandiseUnitCost[i]);
 			//need an onclick funct which will call the prepareProductMerchandiseCall() - set up cookies first
 			$theThumb = $newProduct.children().first().children().first()  //This is the cloneProduct img 
+			
 			//set index in invisible <p> - helps with id the event owner and indexes into arrays above
 			$newProduct.children().first().children().first().children().eq(3).text(i);
 			
@@ -445,6 +459,8 @@ $(function(){
 			$newProduct.appendTo("#sectionOne");
 		}
 	
+	let sum= 0;
+		
 	};
 	
 	//W3 Schools
@@ -459,7 +475,12 @@ $(function(){
 	  var product=getCookie("product");
 	  if (product != "") {
 		alert("Welcome to product: " + product);
-	  } 
+	  } /*else {
+		 user = prompt("Please enter your name:","");
+		 if (user != "" && user != null) {
+		   setCookie("username", user, 30);
+		 }
+	  }*/
 	}
 	//W3Schools
 	function getCookie(cname) {
@@ -482,6 +503,8 @@ $(function(){
 	  let feedback;
 	  let valid = false;
 	  let regexCheck =  /^[a-zA-Z]([-']?[a-zA-Z]+)*( [a-zA-Z]([-']?[a-zA-Z]+)*)+$/; //first surname
+	  /*let regexCheck = /^[a-zA-Z]+[\s]+[a-zA-Z]$/;  //allows alphabet lower,upper
+	  /*let regexCheck = /^[a-z]([-']?[a-z]+)*( [a-z]([-']?[a-z]+)*)+$/; */ /*firstname surname - and apostrophe */
 	  let eUsernameMsg = document.getElementById('usernameErrorMsg'); //provides feedback on userName	
 	  
 	  //first clear the LoginErrorMsg at the top
@@ -491,9 +514,11 @@ $(function(){
 	  //text box space is size===30
 	  if (eUsername.value.length < 1) {// check username NOT EMPTY as per CA1 brief
 		feedback = "Not long enough...";
+		//event.preventDefault();//error on field
 	  } else if (!regexCheck.test(eUsername.value)){//make sure alphabetic
 		  feedback = "Firstname Surname";
-	 } else { //userName field good to go
+		  //event.preventDefault();//error on field
+	  } else { //userName field good to go
 		  feedback = "";
 		  valid = true;
 	  }
@@ -525,7 +550,7 @@ $(function(){
 			 $addressLine1[0].classList.remove('is-valid');
 			return false;
 		}
-		else {//field is valid
+		else {//The surname name is valid
 			$addressLine1[0].classList.add('is-valid');
 			 $addressLine1[0].classList.remove('is-invalid');
 		}
