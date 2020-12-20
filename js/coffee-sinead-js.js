@@ -411,7 +411,6 @@ $(function(){
 										let jj = 15;
 											}
 		);
-		console.log($theButton);
 
 		//Set the Product Img
 		$newProductPic = $(".productPic")
@@ -441,7 +440,7 @@ $(function(){
 			$newProduct.children().first().children().first().children().eq(2).text(merchandiseUnitCost[i]);
 			//need an onclick funct which will call the prepareProductMerchandiseCall() - set up cookies first
 			$theThumb = $newProduct.children().first().children().first()  //This is the cloneProduct img 
-			console.log($theThumb);
+			
 			//set index in invisible <p> - helps with id the event owner and indexes into arrays above
 			$newProduct.children().first().children().first().children().eq(3).text(i);
 			
