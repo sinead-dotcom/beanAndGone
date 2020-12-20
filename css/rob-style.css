@@ -218,6 +218,18 @@ body {
 	.aboutPageDetails h2 {
 		text-align: center;
 	}
+	.innerProductBox {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+	
+	.innerProductBox h2 {
+		padding-top: 20px;
+		padding-bottom: 20px;
+		
+	}
+	
 }
 
 /*
