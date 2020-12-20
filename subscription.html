@@ -93,7 +93,7 @@ CA3 final group project
 								<a class="nav-link active" href="subscription.html">Subscriptions</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="shop-merchandise.html"><h1>Coffee Merchandise</h1></a>
+								<a class="nav-link" href="shop-merchandise.html">Coffee Merchandise</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="coffee-menu.html">Coffee Menu</a>
@@ -169,14 +169,14 @@ CA3 final group project
 						<div class="col-md-7 col-lg-8">
 						<h4 class="mb-3">Billing address</h4>
 						<!-- As have NO server backend - simulation - using email - when successful -->
-						<form  class="needs-validation secondForm" method="post" enctype="text/plain" action="mailto:x20147511@student.ncirl.ie?subject=myform_submission&body=You successfully completed a subscription"><!-- want custom validation -->
+						<form  class="needs-validation secondForm" method="post" enctype="text/plain" action="mailto:x20147511@student.ncirl.ie?subject=myform_submission&body=You%20successfully%20completed%20a%20subscription"><!-- want custom validation -->
 						<!--form  class="needs-validation secondForm" action="javascript:alert( 'success!' );" --><!-- want custom validation -->
 						
 							<div class="row g-3">
 								<div class="col-sm-6">
 								  <label for="given-name" class="form-label">First name</label>
 								  <!-- use HTML standards based tab names for inputs - helps with autofill/autocomplete -->
-								  <input autocomplete="name given-name fullname" type="text" class="form-control" id="given-name" placeholder="" value="" required="">
+								  <input autocomplete="given-name" type="text" class="form-control" id="given-name" placeholder="" value="" required="">
 								  <div class="invalid-feedback" id="given-name-Feedback">
 									Valid first name is required.
 								  </div>
@@ -186,7 +186,7 @@ CA3 final group project
 								</div>
 
 								<div class="col-sm-6">
-								  <label for="family-Name" class="form-label">Last name</label>
+								  <label for="family-name" class="form-label">Last name</label>
 								  <input type="text" class="form-control" id="family-name" placeholder="Family name" value="" required="">
 								  <div class="invalid-feedback">
 									Valid last name is required.
@@ -214,7 +214,7 @@ CA3 final group project
 								</div>
 
 								<div class="col-12 mt-4">
-								  <label for="address-line2 class="form-label">Address 2 <span class="text-muted"></span></label>
+								  <label for="address-line2" class="form-label">Address 2 <span class="text-muted"></span></label>
 								  <input type="text" class="form-control" id="address-line2" placeholder="Apartment or suite" required>
 									<div class="invalid-feedback">
 										Please provide a valid city.
@@ -382,7 +382,7 @@ CA3 final group project
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  
 	
 		
-		<!-- requirements from getbootstrap.com v4.5 -- KEEP near end of body -->
+		<!-- requirements from getbootstrap.com v4.5 - KEEP near end of body -->
 		<!-- script src="hhhhttps://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script-->
 		<!-- comment out to use bootstrap V5 beta - it does cool form validation-->
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>

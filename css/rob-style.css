@@ -88,7 +88,7 @@ body {
 	background-color: white;
 	background-image: url('../images/about/coffee-jumbo2.jpg');
 	background-attachment: fixed; /* image fixed to back to page, it scrolls at a differnt rate  */
-	background-repeat: none;
+	/*background-repeat: none;*/
 	background-size: cover;
 	color: white;
 	text-align: center;
@@ -146,7 +146,7 @@ body {
 	position: fixed;
 	top: 0px;
 	right: 0px;
-	left: offset-md-3;
+	/*left: offset-md-3;*/
 	z-index: 1030;
 	margin-bottom: 20px;
   }
@@ -376,4 +376,8 @@ body {
 
 .coffeeMenu {
 		margin-top: 25px;
-	}
+}
+.page-header h1 {
+	vertical-align: center;
+	text-align: center;
+}

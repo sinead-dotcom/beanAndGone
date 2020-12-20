@@ -12,7 +12,6 @@ body {
 	width: 100%;
 	/*font-size: 100%; *//*going to use em to allow broser to resize */
 }
-}
 
 #sidebar {
  
@@ -155,10 +154,11 @@ body {
 	position: fixed;
 	top: 0px;
 	right: 0px;
-	left: offset-md-3;
+	/*left: offset-md-3;*/
 	z-index: 1030;
 	margin-bottom: 20px;
   }
+  
   #sidebar .navbar-brand {
 	
 	  padding-right: 10px;
@@ -226,7 +226,7 @@ body {
 		background-color: white;
 		background-image: url('../images/about/coffee-jumbo2.jpg');
 		background-attachment: fixed; /* image fixed to back to page, it scrolls at a differnt rate  */
-		background-repeat: none;
+		/*background-repeat: none;*/
 		background-size: cover;
 		color: white;
 		text-align: center;
@@ -454,7 +454,7 @@ body {
 	background-color: white;
 	background-image: url('../images/about/coffee-jumbo2.jpg');
 	background-attachment: fixed; /* image fixed to back to page, it scrolls at a differnt rate  */
-	background-repeat: none;
+	/*background-repeat: none;*/
 	background-size: cover;
 	color: white;
 	text-align: center;
@@ -728,7 +728,7 @@ body {
     background-color: transparent;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0;
-    overflow-anchor: none;
+    /*overflow-anchor: none;*/
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
 }
 
@@ -768,4 +768,8 @@ body {
 .coffeeMenu {
 		margin-top: 25px;
 	}
+.page-header h1 {
+	vertical-align: center;
+	text-align: center;
+}
 
